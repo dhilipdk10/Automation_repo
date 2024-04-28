@@ -1,0 +1,8 @@
+.settings
+.externalToolBuilders
+.project
+node_modules
+allure-report
+allure-results
+actualImages
+package-lock.json

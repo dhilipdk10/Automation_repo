@@ -1,0 +1,9 @@
+{
+    "Login": {
+        "Credential": {
+            "userName": "testuser1@web-3.in",
+            "password": "Testuser@1",
+            "name": "Testuser 1"
+        }
+    }
+}

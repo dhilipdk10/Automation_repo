@@ -1,0 +1,142 @@
+{
+    "errorcodes": {
+        "ERR_4102": {
+            "type": "Single User",
+            "email": "testuseremail@web-3.in",
+            "messageType": "Template",
+            "category": "Ad-campaigns",
+            "template": "New@3",
+            "channels": [
+                "Email"
+            ],
+            "schedule_type": "Send Now",
+            "errorCode": 4102
+        },
+        "ERR_4002": {
+            "type": "Single User",
+            "email": "dhilips@web-3.in",
+            "messageType": "Template",
+            "category": "mobile",
+            "template": "test2",
+            "channels": [
+                "Web Push"
+            ],
+            "schedule_type": "Send Now",
+            "errorCode": 4002
+        },
+        "ERR_4003": {
+            "type": "Single User",
+            "email": "testuseremail@web-3.in",
+            "messageType": "Template",
+            "category": "Mandatory",
+            "template": "MOBiLE PUSH",
+            "channels": [
+                "Mobile Push"
+            ],
+            "schedule_type": "Send Now",
+            "errorCode": 4003
+        },
+        "ERR_4001": {
+            "type": "Single User",
+            "email": "johndoe@gmail.com",
+            "messageType": "Template",
+            "category": "Rewards & Loyalty",
+            "template": "Refer a friend - Non-Personalised",
+            "channels": [
+                "Web Push"
+            ],
+            "schedule_type": "Send Now",
+            "errorCode": 4001
+        }
+    },
+    "API": {
+        "ERR_3001": {
+            "body": {
+                "category_id": 2993,
+                "template_id": 1744,
+                "data_source": "SYSTEM_1",
+                "external_source_id": "109847xscvfbnmdfghjtrhgwqbdugdhewfyhbf89348739489380",
+                "channels": [
+                    "EMAIL"
+                ],
+                "is_scheduled": false
+            },
+            "errorCode": 3001
+        },
+        "ERR_4001": {
+            "addChannels": {
+                "data_source": "SYSTEM_09",
+                "external_source_id": "110",
+                "Web_Push": {
+                    "identifier": "sample",
+                    "language": "en",
+                    "device_model": "Windows NT 10.0",
+                    "device_os": "windows",
+                    "channel": "WEB",
+                    "platform": "ANDROID",
+                    "browser_type": "EDGE",
+                    "data_source": "SYSTEM_09",
+                    "external_source_id": "AT_INVALID_REGISTER1"
+                }
+            },
+            "body": {
+                "category_id": 2993,
+                "template_id": 1744,
+                "data_source": "SYSTEM_09",
+                "external_source_id": "110",
+                "channels": [
+                    "WEB_PUSH"
+                ],
+                "is_scheduled": false
+            },
+            "errorCode": 4101
+        },
+        "ERR_3002": {
+            "body": {
+                "category_id": 2993,
+                "template_id": 1744,
+                "data_source": "SYSTEM_1",
+                "external_source_id": "10000000",
+                "channels": [
+                    "WEB_PUSH"
+                ],
+                "is_scheduled": false
+            },
+            "errorCode": 3002
+        },
+        "ERR_3003": {
+            "body": {
+                "category_id": 2993,
+                "is_bulk_notification": true,
+                "includedUserSegmentList": [
+                    {
+                        "id": "1012",
+                        "name": "ErrorUser",
+                        "description": "description",
+                        "rules": "rule"
+                    }
+                ],
+                "channels": [
+                    "EMAIL"
+                ],
+                "is_scheduled": false,
+                "variantList": [
+                    {
+                        "name": "variant_ABC",
+                        "template_id": 1744
+                    },
+                    {
+                        "name": "variant_CDE",
+                        "template_id": 1733
+                    }
+                ],
+                "variant_settings": {
+                    "audience_percentage": 100
+                }
+            },
+            "validateABTesting": {
+                "errorCode": 3003
+            }
+        }
+    }
+}

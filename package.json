@@ -1,0 +1,49 @@
+{
+  "name": "cdp-automation",
+  "version": "1.0.0",
+  "description": "cdp-automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.js",
+    "report": "allure open allure-report",
+    "report-generate": "allure generate --clean allure-results",
+    "smoke": "wdio run ./wdio.conf.js --suite smoke",
+    "regression": "wdio run ./wdio.conf.js --suite regression",
+    "sanity": "wdio run ./wdio.conf.js --suite sanity",
+    "regression-headless": "wdio run ./wdio.conf-dynamic.js --suite regression --browser chrome-headless",
+    "smoke-headless": "wdio run ./wdio.conf-dynamic.js --suite smoke --browser chrome-headless",
+    "api": "wdio run ./wdio.conf.js --suite api"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.22.0",
+    "aws-sdk": "2.1266.0",
+    "fs-extra": "11.1.1",
+    "moment": "2.29.4",
+    "mysql2": "3.3.1",
+    "report": "0.1.1",
+    "sequelize": "6.31.1"
+  },
+  "devDependencies": {
+    "@badisi/wdio-harness": "2.0.3",
+    "@wdio/allure-reporter": "^8.10.2",
+    "@wdio/cli": "8.11.0",
+    "@wdio/local-runner": "8.11.0",
+    "@wdio/mocha-framework": "8.11.0",
+    "@wdio/selenium-standalone-service": "8.11.0",
+    "@wdio/spec-reporter": "8.11.0",
+    "chromedriver": "123.0.0",
+    "supertest": "6.3.3",
+    "wdio-chromedriver-service": "8.1.1",
+    "wdio-image-comparison-service": "5.0.3",
+    "wdio-intercept-service": "4.4.0",
+    "wdio-wait-for": "3.0.4",
+    "webdriverio": "^8.32.4"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

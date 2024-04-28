@@ -1,0 +1,166 @@
+{
+    "DataSetup": {
+        "category": [
+            {
+                "query": "Insert into category (name, description, priority, ttl, rate_limit, status) values (?, ?, ?, ?, ?, ?)",
+                "input": [
+                    "AT_Category_flow4",
+                    "AT_Category_flow4AT_Category_flow4AT_Category_flow4",
+                    "LOW",
+                    "",
+                    "100 PER DAY",
+                    "ACTIVE"
+                ],
+                "templateList": [
+                    {
+                        "query": "Insert into template (name, description, dynamic_tags, channels, email_content, sms_content, push_content, web_push_content, in_app_content, status, category_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        "input": [
+                            "AT_Template1_flow4",
+                            "AT_Template1_flow4AT_Template1_flow4",
+                            "[]",
+                            "[\"EMAIL\", \"WEB_PUSH\", \"MOBILE_PUSH\", \"SMS\"]",
+                            "{\"message\": \"Message{{ system.first_name }}\", \"subject\": \"HI \"}",
+                            "{\"message\": \"AT_SMSAT_SMS\"}",
+                            "{\"image\": {\"source_type\": \"FILE\"}, \"title\": \"AT_Mobile Push\", \"message\": \"Mobile PushMobile PushMobile Push\"}",
+                            "{\"icon\": {\"url\": \"https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg\", \"source_type\": \"URL\"}, \"image\": {\"source_type\": \"FILE\"}, \"title\": \"AT_Web Push\", \"message\": \"Web PushWeb PushWeb Push\"}",
+                            "{\"card\": {\"body\": {}, \"title\": {}, \"imageFlag\": {}, \"primaryAction\": {}, \"SecondaryAction\": {}, \"portraitImageUrl\": {}, \"landscapeImageUrl\": {}, \"primaryActionButton\": {\"text\": {}}, \"SecondaryActionButton\": {\"text\": {}}}, \"type\": \"CARD\", \"modal\": {\"body\": {}, \"title\": {}, \"action\": {}, \"imageUrl\": {}, \"actionButton\": {\"text\": {}}}, \"banner\": {\"body\": {}, \"title\": {}, \"action\": {}, \"imageUrl\": {}}, \"imageOnly\": {\"action\": {}, \"imageUrl\": {}}}",
+                            "ACTIVE"
+                        ]
+                    },
+                    {
+                        "query": "Insert into template (name, description, dynamic_tags, channels, email_content, sms_content, push_content, web_push_content, in_app_content, status, category_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        "input": [
+                            "AT_Template2_flow4",
+                            "AT_Template2_flow4AT_Template2_flow4",
+                            "[]",
+                            "[\"EMAIL\", \"WEB_PUSH\", \"MOBILE_PUSH\", \"SMS\"]",
+                            "{\"message\": \"Message @@2\", \"subject\": \"Test AT\"}",
+                            "{\"message\": \"Test SMS@@\"}",
+                            "{\"image\": {\"source_type\": \"FILE\"}, \"title\": \"Test  Mobile PushMobile Push\", \"message\": \"Message @@@$\"}",
+                            "{\"icon\": {\"source_type\": \"FILE\"}, \"image\": {\"source_type\": \"FILE\"}, \"title\": \"Test Web Push{{ system.email }}\", \"message\": \"Web Push@@@$\"}",
+                            "{\"card\": {\"body\": {}, \"title\": {}, \"imageFlag\": {}, \"primaryAction\": {}, \"SecondaryAction\": {}, \"portraitImageUrl\": {}, \"landscapeImageUrl\": {}, \"primaryActionButton\": {\"text\": {}}, \"SecondaryActionButton\": {\"text\": {}}}, \"type\": \"CARD\", \"modal\": {\"body\": {}, \"title\": {}, \"action\": {}, \"imageUrl\": {}, \"actionButton\": {\"text\": {}}}, \"banner\": {\"body\": {}, \"title\": {}, \"action\": {}, \"imageUrl\": {}}, \"imageOnly\": {\"action\": {}, \"imageUrl\": {}}}",
+                            "ACTIVE"
+                        ]
+                    }
+                ]
+            },
+            {
+                "query": "Insert into category (name, description, priority, ttl, rate_limit, status) values (?, ?, ?, ?, ?, ?)",
+                "input": [
+                    "AT_Category_flow5",
+                    "AT_Category_flow5AT_Category_flow5AT_Category_flow5AT_Category_flow5AT_Category_flow5",
+                    "MANDATORY",
+                    "",
+                    "",
+                    "ACTIVE"
+                ],
+                "templateList": [
+                    {
+                        "query": "Insert into template (name, description, dynamic_tags, channels, email_content, sms_content, push_content, web_push_content, in_app_content, status, category_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        "input": [
+                            "AT_Template1_flow5",
+                            "AT_Template1_flow5AT_Template1_flow5",
+                            "[]",
+                            "[\"EMAIL\", \"WEB_PUSH\", \"MOBILE_PUSH\", \"SMS\"]",
+                            "{\"message\": \"MSG 1\", \"subject\": \"TEST 1\"}",
+                            "{\"message\": \"TestSMS TestSMSTestSMS\"}",
+                            "{\"image\": {\"source_type\": \"FILE\"}, \"title\": \"Test MobPush\", \"message\": \"Test MobPush msg\"}",
+                            "{\"icon\": {\"source_type\": \"FILE\"}, \"image\": {\"url\": \"https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg\", \"source_type\": \"URL\"}, \"title\": \"Title1\", \"message\": \"message1\"}",
+                            "{\"card\": {\"body\": {}, \"title\": {}, \"imageFlag\": {}, \"primaryAction\": {}, \"SecondaryAction\": {}, \"portraitImageUrl\": {}, \"landscapeImageUrl\": {}, \"primaryActionButton\": {\"text\": {}}, \"SecondaryActionButton\": {\"text\": {}}}, \"type\": \"CARD\", \"modal\": {\"body\": {}, \"title\": {}, \"action\": {}, \"imageUrl\": {}, \"actionButton\": {\"text\": {}}}, \"banner\": {\"body\": {}, \"title\": {}, \"action\": {}, \"imageUrl\": {}}, \"imageOnly\": {\"action\": {}, \"imageUrl\": {}}}",
+                            "ACTIVE"
+                        ]
+                    },
+                    {
+                        "query": "Insert into template (name, description, dynamic_tags, channels, email_content, sms_content, push_content, web_push_content, in_app_content, status, category_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        "input": [
+                            "AT_Template2_flow5",
+                            "AT_Template2_flow5AT_Template2_flow5",
+                            "[]",
+                            "[\"EMAIL\", \"WEB_PUSH\", \"MOBILE_PUSH\", \"SMS\"]",
+                            "{\"message\": \"BEST OFFer\", \"subject\": \"Hi test{{ system.gender }}\"}",
+                            "{\"message\": \"TestSMS !#!@#$%#@{{ system.email }}\"}",
+                            "{\"image\": {\"source_type\": \"FILE\"}, \"title\": \"Test !!#!#!#\", \"message\": \"{{ system.phone_number }} to be checked\"}",
+                            "{\"icon\": {\"source_type\": \"FILE\"}, \"image\": {\"source_type\": \"FILE\"}, \"title\": \"HI{{ system.first_name }}\", \"message\": \" MESSAGE @@!!\"}",
+                            "{\"card\": {\"body\": {}, \"title\": {}, \"imageFlag\": {}, \"primaryAction\": {}, \"SecondaryAction\": {}, \"portraitImageUrl\": {}, \"landscapeImageUrl\": {}, \"primaryActionButton\": {\"text\": {}}, \"SecondaryActionButton\": {\"text\": {}}}, \"type\": \"CARD\", \"modal\": {\"body\": {}, \"title\": {}, \"action\": {}, \"imageUrl\": {}, \"actionButton\": {\"text\": {}}}, \"banner\": {\"body\": {}, \"title\": {}, \"action\": {}, \"imageUrl\": {}}, \"imageOnly\": {\"action\": {}, \"imageUrl\": {}}}",
+                            "ACTIVE"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "userSegment": [
+            {
+                "query": "Insert into user_segment_rule (name, description, rules, status) values (?, ?, ?, ?)",
+                "input": [
+                    "AT_Language",
+                    "Description for AT",
+                    "[[{\"attr\": \"language\", \"cond\": \"=\", \"name\": \"Language\", \"type\": \"text\", \"value\": \"English\"}, {\"attr\": \"role\", \"cond\": \"=\", \"name\": \"Role\", \"type\": \"enum\", \"value\": \"USER\"}]]",
+                    "ACTIVE"
+                ]
+            },
+            {
+                "query": "Insert into user_segment_rule (name, description, rules, status) values (?, ?, ?, ?)",
+                "input": [
+                    "AT_Timezone",
+                    "DescriptionDescriptionDescription",
+                    "[[{\"attr\": \"best_time_contact_timezone\", \"cond\": \"<>\", \"name\": \"Time Zone\", \"type\": \"text\", \"value\": \"IST\"}, {\"attr\": \"gender\", \"cond\": \"=\", \"name\": \"Gender\", \"type\": \"enum\", \"value\": \"MALE\"}]]",
+                    "ACTIVE"
+                ]
+            }
+        ]
+    },
+    "DataCleanup": {
+        "categoryNameList": [
+            "AT_Category_flow4",
+            "AT_Category_flow5"
+        ],
+        "userSegmentNameList": [
+            "AT_Language",
+            "AT_Timezone"
+        ]
+    },
+    "ABTestingFlow": {
+        "template_sendNow": {
+            "includedSegments": [
+                "AT_Language",
+                "AT_Timezone"
+            ],
+            "category": "AT_Category_flow4",
+            "channel": "Email",
+            "variant_A": "AT_Template1_flow4",
+            "variant_B": "AT_Template2_flow4",
+            "percentage": "100",
+            "schedule_type": "Send Now"
+        },
+        "template_sendLater": {
+            "excludedSegments": [
+                "AT_Language"
+            ],
+            "category": "AT_Category_flow5",
+            "channel": "SMS",
+            "variant_A": "AT_Template1_flow5",
+            "variant_B": "AT_Template2_flow5",
+            "percentage": "50",
+            "schedule_type": "Send Later"
+        },
+        "template_save": {
+            "excludedSegments": [
+                "AT_Language"
+            ],
+            "category": "AT_Category_flow5",
+            "channel": "Email",
+            "variant_A": "AT_Template1_flow5",
+            "variant_B": "AT_Template2_flow5",
+            "percentage": "50",
+            "schedule_type": "Save",
+            "editDetails": {
+                "category": "AT_Category_flow4",
+                "channel": "Email",
+                "variant_A": "AT_Template1_flow4",
+                "variant_B": "AT_Template2_flow4",
+                "percentage": "70",
+                "schedule_type": "Save"
+            }
+        }
+    }
+}

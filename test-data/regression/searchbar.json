@@ -1,0 +1,102 @@
+{
+  "search": [
+    {
+      "testCaseName": "Search customer by name",
+      "data": {
+        "searchText": "Kyle Olivia Kyle"
+      }
+    },
+    {
+      "testCaseName": "Search customer by email",
+      "data": {
+        "searchText": "joe123@email.com"
+      }
+    },
+    {
+      "testCaseName": "Search customer by phone",
+      "data": {
+        "searchText": "7890123456"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by name with the search type set as name",
+      "data": {
+        "searchText": "Aiden Olivia James",
+        "searchType": "Name"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by email with the search type set as email",
+      "data": {
+        "searchText": "joe123@email.com",
+        "searchType": "Email"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by phone with the search type set as phone",
+      "data": {
+        "searchText": "7890123456",
+        "searchType": "Phone"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by account_number with the search type set as account_number",
+      "data": {
+        "searchText": "ACCT-00009",
+        "searchType": "Account Number"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by Subscription Number with the search type set as Subscription number",
+      "data": {
+        "searchText": "9846512780",
+        "searchType": "Subscription Number"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by customer_Id with the search type set as customer_Id",
+      "data": {
+        "searchText": "9",
+        "searchType": "Customer ID"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by order_Id with the search type set as order_Id",
+      "data": {
+        "searchText": "1",
+        "searchType": "Order ID"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by subscription_Id with the search type set as subscription_Id",
+      "data": {
+        "searchText": "1",
+        "searchType": "Subscription ID"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by customer_id with sourceSystemId and the search type set as customer_id ",
+      "data": {
+        "searchType": "Customer ID",
+        "sourceSystemId": "1",
+        "searchText": "1"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by order_Id with sourceSystem and the search type set as order_Id",
+      "data": {
+        "searchType": "Order ID",
+        "sourceSystemId": "1",
+        "searchText": "1"
+      }
+    },
+    {
+      "testCaseName": "Search for a customer by subscription_Id with sourceSystem and the search type set as subscription_Id",
+      "data": {
+        "searchType": "Subscription ID",
+        "sourceSystemId": "1",
+        "searchText": "1"
+      }
+    }
+  ]
+}

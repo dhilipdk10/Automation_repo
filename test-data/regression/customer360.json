@@ -1,0 +1,47 @@
+{
+  "Customer_360": [
+    {
+      "testCaseName": "Validate prospect Account",
+      "customerId": "2"
+    },
+    {
+      "testCaseName": "Validating customer having single Account",
+      "customerId": "6",
+      "accountIdList": [
+        2
+      ],
+      "validateViewList": [
+        "CUSTOMER_CONTACT",
+        "ACCOUNT_LIST",
+        "ACCOUNT_CONTACT",
+        "OVERVIEW",
+        "USAGE_AND_BALANCE",
+        "BILLING",
+        "TICKETS",
+        "NOTIFICATION",
+        "ORDERS",
+        "RECOMMENDATION"
+      ],
+      "segments": [
+        {
+          "segmentName": "Female user"
+        },
+        {
+          "segmentName": "premium user"
+        }
+      ]
+    },
+    {
+      "testCaseName": "Validating customer having multiple Account",
+      "customerId": "9",
+      "segments": [
+        {
+          "segmentName": "Female user"
+        },
+        {
+          "segmentName": "Elite user"
+        }
+      ]
+    }
+  ]
+}

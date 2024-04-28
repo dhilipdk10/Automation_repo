@@ -1,0 +1,190 @@
+{
+    "DataCleanup": {
+        "categoryNameList": [
+            "AT_MandatoryCategory",
+            "AT_MediumCategory",
+            "AT_LowCategory",
+            "AT_MediumCategory",
+            "AT_MediumCategory"
+        ],
+        "userSegmentNameList": [
+            "AT_test1",
+            "AT_test1_Updated"
+        ]
+    },
+    "Category": {
+        "MandatoryPriority_PerDay": {
+            "name": "AT_MandatoryCategory",
+            "description": "Create category using automation",
+            "priority": "Mandatory",
+            "ttl": 1
+        },
+        "MediumPriority_PerWeek": {
+            "name": "AT_MediumCategory",
+            "description": "Create category using automation",
+            "priority": "Medium",
+            "rateLimit": "Per Week",
+            "rateLimitValue": 10,
+            "ttl": 1
+        },
+        "LowPriority_PerMonth": {
+            "name": "AT_LowCategory",
+            "description": "Create category using automation",
+            "priority": "Low",
+            "rateLimit": "Per Month",
+            "rateLimitValue": 10,
+            "ttl": 1
+        },
+        "updateCategory": {
+            "name": "AT_MediumCategory",
+            "description": "Update category using automation",
+            "priority": "Low",
+            "rateLimit": "Per Day",
+            "rateLimitValue": 2,
+            "ttl": 7
+        },
+        "deleteCategory": {
+            "name": "AT_LowCategory"
+        }
+    },
+    "Template": {
+        "createTemplate": {
+            "name": "AT_Template",
+            "description": "Template description #$#",
+            "categoryName": "AT_MediumCategory",
+            "channels": [
+                "Email",
+                "Web Push",
+                "Mobile Push",
+                "SMS"
+            ],
+            "email": {
+                "subject": "AT_test",
+                "emailsubjectsystemtag": "HI first_name",
+                "body": "AT_test_Body",
+                "imageName": "Email.png",
+                "image": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg",
+                "webpushTitleSystemtag": "name",
+                "webpushMessageSystemtag": "email"
+            },
+            "webPush": {
+                "title": "AT_Template1",
+                "content": "Web push descrip check",
+                "webpushTitleSystemtag": "language",
+                "webpushMessageSystemtag": "date_of_birth",
+                "clickAction": "https: //notification.web-3.in/",
+                "image": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg",
+                "icon": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg"
+            },
+            "mobilePush": {
+                "title": "AT_Template2",
+                "message": "Mob push descrip check",
+                "mobilepushMessageSystemtag": "date_of_birth",
+                "clickAction": "https: //notification.web-3.in/",
+                "image": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg"
+            },
+            "sms": {
+                "content": "AT_Template@@@",
+                "smsContentSystemtag": "phone_number"
+            }
+        },
+        "updateTemplate": {
+            "name": "AT_Template",
+            "categoryName": "AT_MediumCategory",
+            "channels": [
+                "Email",
+                "Web Push",
+                "Mobile Push",
+                "SMS"
+            ],
+            "email": {
+                "subject": "Test check_AT",
+                "body": "Email descrip check_AT",
+                "imageName": "Email.png",
+                "image": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg",
+                "webpushTitleSystemtag": "name",
+                "webpushMessageSystemtag": "email"
+            },
+            "webPush": {
+                "title": "Test_title_AT",
+                "content": "Web push descrip check_AT",
+                "webpushTitleSystemtag": "language",
+                "webpushMessageSystemtag": "date_of_birth",
+                "clickAction": "https: //notification.web-3.in/",
+                "image": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg",
+                "icon": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg"
+            },
+            "mobilePush": {
+                "title": "Test_Mob_AT",
+                "message": "Mob push descrip check",
+                "mobilepushMessageSystemtag": "date_of_birth",
+                "clickAction": "https: //notification.web-3.in/",
+                "image": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg"
+            },
+            "sms": {
+                "content": "HI AT_Template ",
+                "smsContentSystemtag": "phone_number"
+            }
+        },
+        "deleteTemplate": {
+            "name": "AT_Template",
+            "categoryName": "AT_MediumCategory"
+        }
+    },
+    "userSegment": {
+        "createUserSegment": {
+            "name": "AT_test1",
+            "description": "automation",
+            "rules": [
+                [
+                    {
+                        "type": "Age",
+                        "condition": "Greater than or Equal to",
+                        "value": "18"
+                    },
+                    {
+                        "type": "Role",
+                        "condition": "is",
+                        "value": "User"
+                    }
+                ],
+                [
+                    {
+                        "type": "Gender",
+                        "condition": "is",
+                        "value": "Male"
+                    }
+                ]
+            ]
+        },
+        "updateUserSegment": {
+            "name": "AT_test1_Updated",
+            "existingName": "AT_test1",
+            "description": "Update description _automation",
+            "rules": [
+                [
+                    {
+                        "type": "Age",
+                        "condition": "Greater than or Equal to",
+                        "value": "20"
+                    },
+                    {
+                        "type": "Role",
+                        "condition": "is",
+                        "value": "Admin"
+                    }
+                ],
+                [
+                    {
+                        "type": "Gender",
+                        "condition": "is",
+                        "value": "Female"
+                    }
+                ]
+            ]
+        },
+        "deleteUserSegment": {
+            "name": "AT_test1_Updated"
+        }
+    }
+}

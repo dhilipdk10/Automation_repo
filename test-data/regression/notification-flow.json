@@ -1,0 +1,299 @@
+{
+    "DataSetup": {
+        "category": [
+            {
+                "query": "Insert into category (name, description, priority, ttl, rate_limit, status) values (?, ?, ?, ?, ?, ?)",
+                "input": [
+                    "AT_Category_flow1",
+                    "Automation setup for AT_Category_flow1",
+                    "LOW",
+                    19,
+                    "50 PER DAY",
+                    "ACTIVE"
+                ],
+                "templateList": [
+                    {
+                        "query": "Insert into template (name, description, dynamic_tags, channels, email_content, sms_content, push_content, web_push_content, in_app_content, status, category_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        "input": [
+                            "AT_Template_flow1",
+                            "Check for AT_Template_flow1",
+                            "[]",
+                            "[\"EMAIL\", \"WEB_PUSH\", \"SMS\"]",
+                            "{\"message\": \"Hi {{ system.first_name }}, This is test email message\", \"subject\": \"Test Email Message\"}",
+                            "{\"message\": \"Test SMS1\"}",
+                            "{\"image\": {}}",
+                            "{\"icon\": {\"source_type\": \"FILE\"}, \"image\": {\"url\": \"https://thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg\", \"source_type\": \"URL\"}, \"title\": \"Hello {{ system.name }}\", \"message\": \"Test Webpush Message\"}",
+                            "{}",
+                            "ACTIVE"
+                        ]
+                    }
+                ]
+            },
+            {
+                "query": "Insert into category (name, description, priority, ttl, rate_limit, status) values (?, ?, ?, ?, ?, ?)",
+                "input": [
+                    "AT_Category_flow2",
+                    "Automation setup for AT_Category_flow2",
+                    "MANDATORY",
+                    null,
+                    null,
+                    "ACTIVE"
+                ],
+                "templateList": [
+                    {
+                        "query": "Insert into template (name, description, dynamic_tags, channels, email_content, sms_content, push_content, web_push_content, in_app_content, status, category_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        "input": [
+                            "AT_Template_flow2",
+                            "Check for AT_Template_flow2",
+                            "[]",
+                            "[\"MOBILE_PUSH\", \"SMS\"]",
+                            "{}",
+                            "{\"message\": \"TestSMS2 {{ system.phone_number }}\"}",
+                            "{\"image\": {\"url\": \"https://thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg\", \"source_type\": \"URL\"}, \"title\": \"HI Mobile\", \"message\": \"Test Mobile push {{ system.email }}\"}",
+                            "{\"icon\": {}, \"image\": {}}",
+                            "{}",
+                            "ACTIVE"
+                        ]
+                    }
+                ]
+            },
+            {
+                "query": "Insert into category (name, description, priority, ttl, rate_limit, status) values (?, ?, ?, ?, ?, ?)",
+                "input": [
+                    "AT_Category_flow3",
+                    "Automation setup for AT_Category_flow3",
+                    "MEDIUM",
+                    "",
+                    "25 PER DAY",
+                    "ACTIVE"
+                ],
+                "templateList": [
+                    {
+                        "query": "Insert into template (name, description, dynamic_tags, channels, email_content, sms_content, push_content, web_push_content, in_app_content, status, category_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        "input": [
+                            "AT_Template_flow3",
+                            "Check for AT_Template_flow3",
+                            "[]",
+                            "[\"EMAIL\"]",
+                            "{\"message\": \"AT_Check\", \"subject\": \"AT_Check_subject\"}",
+                            "{}",
+                            "{\"image\": {}}",
+                            "{\"icon\": {}, \"image\": {}}",
+                            "{}",
+                            "ACTIVE"
+                        ]
+                    }
+                ]
+            },
+            {
+                "query": "Insert into category (name, description, priority, ttl, rate_limit, status) values (?, ?, ?, ?, ?, ?)",
+                "input": [
+                    "AT_Free line setup",
+                    "Demo image comprision",
+                    "MANDATORY",
+                    "",
+                    "",
+                    "ACTIVE"
+                ],
+                "templateList": [
+                    {
+                        "query": "Insert into template (name, description, dynamic_tags, channels, email_content, sms_content, push_content, web_push_content, in_app_content, status, category_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        "input": [
+                            "AT_Free line",
+                            "",
+                            "[]",
+                            "[\"EMAIL\"]",
+                            "{\"message\": \"<p>Hello,</p><p><br></p><p><span><img src='https://template-contents-21563.s3.amazonaws.com/template/automation/96399436-802c-4387-b107-65e96161e40e.png'></span></p><p><br></p><p><span style='color: rgb(206, 145, 120);'>﻿User visits our website, browses pricing plans and leaves without purchases. The user is tagged and recorded in CDP. Segments can be created to run targeted campaigns to nudge the user to revisit and purchase.</span></p>\", \"subject\": \"Free line setup\"}",
+                            "{}",
+                            "{\"image\": {}}",
+                            "{\"icon\": {}, \"image\": {}}",
+                            "{}",
+                            "ACTIVE"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "userSegment": [
+            {
+                "query": "Insert into user_segment_rule (name, description, rules, status) values (?, ?, ?, ?)",
+                "input": [
+                    "AT_Gender",
+                    "AT_GenderAT_Gender",
+                    "[[{\"attr\": \"age\", \"cond\": \"<=\", \"name\": \"Age\", \"type\": \"number\", \"value\": 28}, {\"attr\": \"gender\", \"cond\": \"=\", \"name\": \"Gender\", \"type\": \"enum\", \"value\": \"FEMALE\"}]]",
+                    "ACTIVE"
+                ]
+            },
+            {
+                "query": "Insert into user_segment_rule (name, description, rules, status) values (?, ?, ?, ?)",
+                "input": [
+                    "AT_Admin",
+                    "AT_AdminAT_Admin",
+                    "[[{\"attr\": \"role\", \"cond\": \"=\", \"name\": \"Role\", \"type\": \"enum\", \"value\": \"ADMIN\"}]]",
+                    "ACTIVE"
+                ]
+            }
+        ]
+    },
+    "DataCleanup": {
+        "categoryNameList": [
+            "AT_Category_flow1",
+            "AT_Category_flow2",
+            "AT_Category_flow3",
+            "AT_Free line setup"
+        ],
+        "userSegmentNameList": [
+            "AT_Gender",
+            "AT_Admin"
+        ]
+    },
+    "OutLook": {
+        "loginDetails": {
+            "email": "testuser1@web-3.in",
+            "password": "Web-3$1234",
+            "from": "demo@dotmobile.app"
+        }
+    },
+    "NotificationFlow": {
+        "single_template_save": {
+            "type": "Single User",
+            "email": "testuser1@web-3.in",
+            "messageType": "Template",
+            "category": "AT_Category_flow1",
+            "template": "AT_Template_flow1",
+            "channels": [
+                "Email"
+            ],
+            "schedule_type": "Save",
+            "edit": {
+                "channels": [
+                    "SMS"
+                ],
+                "schedule_type": "Send Now"
+            },
+            "clone": {
+                "schedule_type": "Send Later"
+            }
+        },
+        "single_template_sendLater": {
+            "type": "Single User",
+            "email": "testuser1@web-3.in",
+            "messageType": "Template",
+            "category": "AT_Category_flow2",
+            "template": "AT_Template_flow2",
+            "channels": [
+                "SMS"
+            ],
+            "schedule_type": "Send Later"
+        },
+        "single_custom_sendNow": {
+            "type": "Single User",
+            "email": "testuser1@web-3.in",
+            "messageType": "Custom",
+            "category": "AT_Category_flow2",
+            "channels": [
+                "Email"
+            ],
+            "title": "Test Email Message",
+            "body": "<p>Dear {{ system.first_name }} {{ system.last_name }},</p><p><br></p><p>Refer friends and earn upto 50$ in rewards</p><p>Know more!!</p>",
+            "schedule_type": "Send Now",
+            "emailValidation": {
+                "subject": "Test Email Message",
+                "body": "Dear Test User1,\n\nRefer friends and earn upto 50$ in rewards\nKnow more!!"
+            }
+        },
+        "single_custom_sendLater": {
+            "type": "Single User",
+            "email": "testuser1@web-3.in",
+            "messageType": "Custom",
+            "category": "AT_Category_flow3",
+            "template": "AT_Template_flow3",
+            "channels": [
+                "Email"
+            ],
+            "title": "Test - Title",
+            "body": "Test - Body",
+            "image": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg",
+            "click_action": "/test",
+            "schedule_type": "Send Later"
+        },
+        "Multiple_template_sendNow": {
+            "type": "Multiple Users",
+            "includedSegments": [
+                "AT_Gender"
+            ],
+            "excludedSegments": [],
+            "messageType": "Template",
+            "category": "AT_Category_flow2",
+            "template": "AT_Template_flow2",
+            "channels": [
+                "Mobile Push",
+                "SMS"
+            ],
+            "schedule_type": "Send Now"
+        },
+        "Multiple_template_sendLater": {
+            "type": "Multiple Users",
+            "includedSegments": [
+                "AT_Admin",
+                "AT_Gender"
+            ],
+            "excludedSegments": [],
+            "messageType": "Template",
+            "category": "AT_Category_flow3",
+            "template": "AT_Template_flow3",
+            "channels": [
+                "Email"
+            ],
+            "schedule_type": "Send Later"
+        },
+        "Multiple_custom_sendNow": {
+            "type": "Multiple Users",
+            "includedSegments": [],
+            "excludedSegments": [
+                "AT_Gender"
+            ],
+            "messageType": "Custom",
+            "category": "AT_Category_flow1",
+            "template": "AT_Template_flow1",
+            "channels": [
+                "Email",
+                "SMS",
+                "Web Push"
+            ],
+            "title": "Test - Title",
+            "body": "Test - Body",
+            "schedule_type": "Send Now",
+            "image": "https: //thumbs.dreamstime.com/b/special-offer-price-tag-sign-paper-against-rustic-red-painted-barn-wood-55863934.jpg"
+        },
+        "Multiple_custom_sendLater": {
+            "type": "Multiple Users",
+            "includedSegments": [
+                "AT_Admin"
+            ],
+            "excludedSegments": [],
+            "messageType": "Custom",
+            "category": "AT_Category_flow2",
+            "template": "AT_Template_flow2",
+            "channels": [
+                "SMS"
+            ],
+            "body": "AT_Test - Body",
+            "schedule_type": "Send Later"
+        },
+        "single_template_sendNow_high": {
+            "type": "Single User",
+            "email": "testuser1@web-3.in",
+            "messageType": "Template",
+            "category": "AT_Free line setup",
+            "template": "AT_Free line",
+            "channels": [
+                "Email"
+            ],
+            "schedule_type": "Send Now",
+            "emailValidation": {
+                "subject": "Free line setup"
+            }
+        }
+    }
+}
